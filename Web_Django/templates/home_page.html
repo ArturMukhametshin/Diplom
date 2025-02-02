@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Главная страница {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <style>
+        body {
+    background-image:
+        {% if request.path == '/portfolio/cakes/' %}
+            url('/static/img/background_cakes.jpg')
+        {% elif request.path == '/portfolio/cupcakes/' %}
+            url('/static/img/background_cupcakes.jpg')
+        {% elif request.path == '/portfolio/donuts/' %}
+            url('/static/img/background_donuts.jpg')
+        {% else %}
+            url('/static/img/home_page.jpg')
+        {% endif %};
+            background-size: cover; / Изменяет размер изображения, чтобы покрыть весь экран /
+            background-repeat: no-repeat; / Изображение не повторяется /
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; / Цвет фона страницы /
+            background-attachment: scroll;
+        }
+        </style>
+</head>
+<body>
+    {% block menu %}
+    <nav>
+        <div class="logo">
+            <a href='/' class="logo"><img src="{% static 'img/img_logo/logo.png' %}" alt="Логотип " /></a>
+        </div>
+        <div class="menu">
+            <a href="/portfolio">наши работы</a>
+            <a href="/services">услуги</a>
+            <a href="/contacts">контакты</a>
+            <a href="/user_registration">регистрация</a>
+        </div>
+    </nav>
+
+    {% endblock %}
+
+    {% if request.path == '/portfolio/' %}
+    <div class="bottom-navigation">
+        <p class="title">НАШИ РАБОТЫ</p>
+        <div class="bottom-menu">
+            <a href="/portfolio/cakes">ТОРТЫ</a>
+            <a href="/portfolio/cupcakes">КАПКЕЙКИ</a>
+            <a href="/portfolio/donuts">ПОНЧИКИ</a>
+            <a href="/portfolio/national_sweets">НАЦИОНАЛЬНЫЕ СЛАДОСТИ</a>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if request.path == '/portfolio/cakes/' %}
+    <div class="bottom-navigation">
+        <p class="title">ТОРТЫ</p>
+        <p class="text">торты любой сложности</p>
+    </div>
+
+    <div class="cakes-container">
+        <div class="image-grid">
+            <a href="#">
+                <img src="{% static 'img/img_cakes/1.jpg' %}" alt="Первое изображение" />
+                <p>КРАСНЫЙ БАРХАТ</p>
+            </a>
+            <a href="#">
+                <img src="{% static 'img/img_cakes/2.jpg' %}" alt="Второе изображение" />
+                <p>МОЛОЧНАЯ ДЕВОЧКА</p>
+            </a>
+            <a href="#">
+                <img src="{% static 'img/img_cakes/3.jpg' %}" alt="Третье изображение" />
+                <p>МЕДОВЫЙ</p>
+            </a>
+
+        </div>
+    </div>
+    {% endif %}
+
+    {% if request.path == '/portfolio/cupcakes/' %}
+    <div class="bottom-navigation">
+        <p class="title">КАПКЕЙКИ</p>
+        <p class="text">капкейки на любой вкус и цвет</p>
+    </div>
+
+    <div class="cakes-container">
+        <div class="image-grid">
+            <a href="#">
+                <img src="{% static 'img/img_cupcakes/1.jpg' %}" alt="Первое изображение" />
+                <p>твоей половинке</p>
+            </a>
+            <a href="#">
+                <img src="{% static 'img/img_cupcakes/2.jpg' %}" alt="Второе изображение" />
+                <p>на день рождения</p>
+            </a>
+            <a href="#">
+                <img src="{% static 'img/img_cupcakes/3.jpg' %}" alt="Третье изображение" />
+                <p>для любого повода и на любой вкус</p>
+            </a>
+
+        </div>
+    </div>
+    {% endif %}
+
+     {% if request.path == '/portfolio/donuts/' %}
+    <div class="bottom-navigation">
+        <p class="title"> ПОНЧИКИ </p>
+        <p class="text">вкуснейшие пончики</p>
+    </div>
+
+    <div class="cakes-container">
+        <div class="image-grid">
+            <a href="#">
+                <img src="{% static 'img/img_donuts/1.jpg' %}" alt="Первое изображение" />
+                <p>КЛУБНИЧНЫЙ</p>
+            </a>
+            <a href="#">
+                <img src="{% static 'img/img_donuts/2.jpg' %}" alt="Второе изображение" />
+                <p>БАНАНОВЫЙ</p>
+            </a>
+            <a href="#">
+                <img src="{% static 'img/img_donuts/3.jpg' %}" alt="Третье изображение" />
+                <p>ШОКОЛАДНЫЙ</p>
+            </a>
+
+        </div>
+    </div>
+    {% endif %}
+
+
+    {% if request.path == '/portfolio/national_sweets/' %}
+    <div class="bottom-navigation">
+        <p class="title"> НАЦИОНАЛЬНЫЕ СЛАДОСТИ </p>
+        <p class="text">сладости Башкортостана</p>
+    </div>
+
+    <div class="cakes-container">
+        <div class="image-grid">
+            <a href="#">
+                <img src="{% static 'img/img_national_sweets/1.jpg' %}" alt="Первое изображение" />
+                <p>ЧАК-ЧАК</p>
+            </a>
+            <a href="#">
+                <img src="{% static 'img/img_national_sweets/2.jpg' %}" alt="Второе изображение" />
+                <p>БАУРСАК</p>
+            </a>
+            <a href="#">
+                <img src="{% static 'img/img_national_sweets/3.jpg' %}" alt="Третье изображение" />
+                <p>КРАСНЫЙ ТВОРОГ</p>
+            </a>
+
+        </div>
+    </div>
+    {% endif %}
+
+
+</body>
+</html>

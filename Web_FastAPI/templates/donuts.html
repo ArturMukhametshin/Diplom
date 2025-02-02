@@ -1,0 +1,28 @@
+{% extends "home_page.html" %}
+
+{% block title %} Пончики {% endblock %}
+
+{% block donuts %}
+    <div class="bottom-navigation">
+        <p class="title"> ПОНЧИКИ </p>
+        <p class="text">вкуснейшие пончики</p>
+    </div>
+
+    <div class="cakes-container">
+        <div class="image-grid">
+            <a href="#">
+                <img src="/static/img/img_donuts/1.jpg" alt="Первое изображение" />
+                <p>КЛУБНИЧНЫЙ</p>
+            </a>
+            <a href="#">
+                <img src="/static/img/img_donuts/2.jpg" alt="Второе изображение" />
+                <p>БАНАНОВЫЙ</p>
+            </a>
+            <a href="#">
+                <img src="/static/img/img_donuts/3.jpg" alt="Третье изображение" />
+                <p>ШОКОЛАДНЫЙ</p>
+            </a>
+
+        </div>
+    </div>
+{% endblock %}

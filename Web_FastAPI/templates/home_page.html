@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Главная страница {% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+        <style>
+        body {
+    background-image:
+        {% if request.path == '/portfolio/cakes/' %}
+            url('/static/img/background_cakes.jpg')
+        {% elif request.path == '/portfolio/cupcakes/' %}
+            url('/static/img/background_cupcakes.jpg')
+        {% elif request.path == '/portfolio/donuts/' %}
+            url('/static/img/background_donuts.jpg')
+        {% else %}
+            url('/static/img/home_page.jpg')
+        {% endif %};
+            background-size: cover; / Изменяет размер изображения, чтобы покрыть весь экран /
+            background-repeat: no-repeat; / Изображение не повторяется /
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; / Цвет фона страницы /
+        }
+        </style>
+</head>
+<body>
+    {% block menu %}
+    <nav>
+        <div class="logo">
+            <a href='/' class="logo"><img src="/static/img/img_logo/logo.png" alt="Логотип " /></a>
+        </div>
+        <div class="menu">
+            <a href="/portfolio">наши работы</a>
+            <a href="/services">услуги</a>
+            <a href="/contacts">контакты</a>
+            <a href="/user_registration">регистрация</a>
+        </div>
+    </nav>
+
+    {% endblock %}
+
+    {% block portfolio_navigation %} {% endblock %}
+
+    {% block cakes %} {% endblock %}
+
+    {% block cupcakes %} {% endblock %}
+
+    {% block donuts %} {% endblock %}
+
+    {% block national_sweets %} {% endblock %}
+
+</body>
+</html>

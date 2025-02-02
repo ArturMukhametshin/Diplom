@@ -1,0 +1,28 @@
+{% extends "home_page.html" %}
+
+{% block title %} Капкейки {% endblock %}
+
+{% block cupcakes %}
+    <div class="bottom-navigation">
+        <p class="title"> КАПКЕЙКИ </p>
+        <p class="text">капкейки на любой вкус и цвет</p>
+    </div>
+
+    <div class="cakes-container">
+        <div class="image-grid">
+            <a href="#">
+                <img src="/static/img/img_cupcakes/1.jpg" alt="Первое изображение" />
+                <p>твоей половинке</p>
+            </a>
+            <a href="#">
+                <img src="/static/img/img_cupcakes/2.jpg" alt="Второе изображение" />
+                <p>на день рождения</p>
+            </a>
+            <a href="#">
+                <img src="/static/img/img_cupcakes/3.jpg" alt="Третье изображение" />
+                <p>для любого повода и на любой вкус</p>
+            </a>
+
+        </div>
+    </div>
+{% endblock %}

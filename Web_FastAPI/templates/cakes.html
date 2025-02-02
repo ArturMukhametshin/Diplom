@@ -1,0 +1,29 @@
+{% extends "home_page.html" %}
+
+{% block title %} Торты {% endblock %}
+
+    {% block cakes %}
+    <div class="bottom-navigation">
+        <p class="title">ТОРТЫ</p>
+        <p class="text">торты любой сложности</p>
+    </div>
+
+    <div class="cakes-container">
+        <div class="image-grid">
+            <a href="#">
+                <img src="/static/img/img_cakes/1.jpg" alt="Первое изображение" />
+                <p>КРАСНЫЙ БАРХАТ</p>
+            </a>
+            <a href="#">
+                <img src="/static/img/img_cakes/2.jpg" alt="Второе изображение" />
+                <p>МОЛОЧНАЯ ДЕВОЧКА</p>
+            </a>
+            <a href="#">
+                <img src="/static/img/img_cakes/3.jpg" alt="Третье изображение" />
+                <p>МЕДОВЫЙ</p>
+            </a>
+
+        </div>
+    </div>
+
+{% endblock %}

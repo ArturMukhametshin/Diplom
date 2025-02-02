@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{title}}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+
+    {% block menu %}
+    <nav>
+        <div class="logo">
+            <a href='/' class="logo"><img src="{% static 'img/img_logo/logo.png' %}" alt="Логотип " /></a>
+        </div>
+        <div class="menu">
+            <a href="/portfolio">наши работы</a>
+            <a href="/services">услуги</a>
+            <a href="/contacts">контакты</a>
+            <a href="/user_registration">регистрация</a>
+        </div>
+    </nav>
+    {% endblock %}
+
+    {% block content %}
+    <div class="contact-info">
+        <div class="column">
+            <div>ЗАКАЗАТЬ ДЕСЕРТ</div>
+            <br>
+            <div>+7 914 761 4759</div>
+            <div>sweety-sweets@yandex.ru</div>
+        </div>
+        <div class="column">
+            <div>АДРЕС</div>
+            <br>
+            <div>г. Уфа</div>
+            <div>Россия, Республика Башкортостан</div>
+        </div>
+        <div class="column">
+            <div>ВРЕМЯ РАБОТЫ</div>
+            <br>
+            <div>пн-пт 10:00 - 19:00</div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block registration%}{% endblock %}
+
+    {% block bottom_title %}
+    <div class="title">
+        <p >КОНТАКТЫ</p>
+
+    </div>
+    {% endblock %}
+
+</body>
+</html>

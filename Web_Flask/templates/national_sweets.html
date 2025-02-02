@@ -1,0 +1,29 @@
+{% extends "home_page.html" %}
+
+{% block title %} Национальные сладости {% endblock %}
+
+{% block national_sweets %}
+
+    <div class="bottom-navigation">
+        <p class="title"> НАЦИОНАЛЬНЫЕ СЛАДОСТИ </p>
+        <p class="text">сладости Башкортостана</p>
+    </div>
+
+    <div class="cakes-container">
+        <div class="image-grid">
+            <a href="#">
+                <img src="/static/img/img_national_sweets/1.jpg" alt="Первое изображение" />
+                <p>ЧАК-ЧАК</p>
+            </a>
+            <a href="#">
+                <img src="/static/img/img_national_sweets/2.jpg" alt="Второе изображение" />
+                <p>БАУРСАК</p>
+            </a>
+            <a href="#">
+                <img src="/static/img/img_national_sweets/3.jpg" alt="Третье изображение" />
+                <p>КРАСНЫЙ ТВОРОГ</p>
+            </a>
+
+        </div>
+    </div>
+{% endblock %}
