@@ -286,17 +286,17 @@ FastAPI подходит для высокопроизводительных п�
 ```
 Web_Django/               
 │
-├── Turtle_Django/        
+├── Web_Django/        
 │    ├── manage.py
 │    ├── db.sqlite3       
-│    ├── Turtle_Django/    
+│    ├── Web_Django/    
 │    │   ├── __init__.py
 │    │   ├── asgi.py 
 │    │   ├── settings.py    
 │    │   ├── urls.py        
 │    │   └── wsgi.py        
 │    │
-│    └── cherepaha/         
+│    └── candy_shop/         
 │    │   ├── migrations/    
 │    │   ├── admin.py
 │    │   ├──__init__.py
@@ -312,13 +312,13 @@ Web_Django/
 │    │       
 │    │
 │    └── templates/         
-│        ├── architecture.html
-│        ├── commercial_interiors.html
-│        ├── contacts.html
+│        ├── cakes.html
+│        ├── cupcakes.html
+│        ├── donuts.html
 │        ├── home_page.html
-│        ├── improvement.html
+│        ├── national_sweets.html
 │        ├── portfolio.html
-│        ├── residential_interiors.html
+│        ├── contacks.html
 │        ├── services.html
 │        └── user_registration.html
 └──venv/
@@ -341,25 +341,25 @@ tzdata==2024.2
 ```
 Web-Flask/
 ├── instanse
-│   └── cherepaha.db
+│   └── cakes.db
 ├── routers/
 │   ├── main_menu.py
 │   └── portfolio_menu.py
 ├── static/
 │   ├── css/                 
 │   └── img/                  
-└── templates/
-│   ├── architecture.html      
-│   ├── commercial_interiors.html 
-│   ├── contacts.html          
-│   ├── home_page.html         
-│   ├── improvement.html       
-│   ├── portfolio.html         
-│   ├── residential_interiors.html
-│   ├── services.html
-│   └── user_registration.html
+└── templates/         
+│        ├── cakes.html
+│        ├── cupcakes.html
+│        ├── donuts.html
+│        ├── home_page.html
+│        ├── national_sweets.html
+│        ├── portfolio.html
+│        ├── contacks.html
+│        ├── services.html
+│        └── user_registration.html
 ├── config.py
-├── db_cherepaha.py
+├── db_cakes.py
 ├── forms.py
 ├── main.py      
 └── venv/
@@ -393,7 +393,7 @@ WTForms==3.2.1
 
 ## Схематичное изображение структуры проекта.
 ```
-web-fast/
+Web-FastAPI/
 ├── routers/
 │   ├── main_menu.py
 │   ├── portfolio_menu.py
@@ -401,17 +401,17 @@ web-fast/
 ├── static/
 │   ├── css/                 
 │   └── img/                  
-└── templates/
-│   ├── architecture.html      
-│   ├── commercial_interiors.html 
-│   ├── contacts.html          
-│   ├── home_page.html         
-│   ├── improvement.html       
-│   ├── portfolio.html         
-│   ├── residential_interiors.html
-│   ├── services.html
-│   └── user_registration.html
-├── cherepaha.db
+└── templates/         
+│        ├── cakes.html
+│        ├── cupcakes.html
+│        ├── donuts.html
+│        ├── home_page.html
+│        ├── national_sweets.html
+│        ├── portfolio.html
+│        ├── contacks.html
+│        ├── services.html
+│        └── user_registration.html
+├── cakes.db
 ├── forms.py
 ├── main.py     
 └── venv/  
