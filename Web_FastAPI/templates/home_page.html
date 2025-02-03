@@ -7,11 +7,11 @@
         <style>
         body {
     background-image:
-        {% if request.path == '/portfolio/cakes/' %}
+        {% if request.path == '/portfolio/cakes' %}
             url('/static/img/background_cakes.jpg')
-        {% elif request.path == '/portfolio/cupcakes/' %}
+        {% elif request.path == '/portfolio/cupcakes' %}
             url('/static/img/background_cupcakes.jpg')
-        {% elif request.path == '/portfolio/donuts/' %}
+        {% elif request.path == '/portfolio/donuts' %}
             url('/static/img/background_donuts.jpg')
         {% else %}
             url('/static/img/home_page.jpg')
